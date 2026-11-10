@@ -9,7 +9,7 @@ Krexa's key can trade inside limits the chain enforces. It cannot move money out
 |---|---|---|---|
 | [`evm/`](evm) | **EVM home** (current). `KrexaSwapPolicy` and `KrexaRiskHook`: ERC-7579 modules that limit a session key on each user's own Kernel v3.3 smart account (ERC-4337). | Monad, Arbitrum, Robinhood Chain | 169 Foundry tests: unit, fuzz, invariant |
 | [`evm-legacy/`](evm-legacy) | Agent credit protocol (retired product): agent registry, agent wallets, x402 payment router, credit vaults, liquidity pools, credit score. | Base Sepolia, Monad | 569 Foundry tests |
-| [`solana/`](solana) | Anchor programs for the same agent wallet and credit design on Solana. | Solana | TypeScript tests (Anchor) |
+| [`solana/`](solana) | Anchor programs for the same agent wallet and credit design on Solana (retired; mainnet programs closed 2026-09-29). | Solana | TypeScript tests (Anchor) |
 
 Krexa vaults on other chains have their own repos: [krexa-stellar](https://github.com/Krexa-xyz/krexa-stellar) (Soroban).
 

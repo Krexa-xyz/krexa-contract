@@ -4,11 +4,12 @@ Anchor 0.30.1 programs: agent registry, agent wallet (deposit, trade through whi
 credit, health checks, liquidation), credit vault, payment router, venue whitelist, service plan and credit score.
 Shared types live in `programs/krexa-common`.
 
-> **Unaudited.**
+> **Unaudited and retired.** The mainnet programs were closed on 2026-09-29: no program data, no accounts, no upgrade
+> authority. Read [KNOWN-ISSUES.md](KNOWN-ISSUES.md) before you reuse this code.
 
 ## Program ids
 
-| Program | Mainnet | Devnet / localnet |
+| Program | Mainnet (closed) | Devnet / localnet |
 |---|---|---|
 | krexa_agent_registry | `EnteGjokMnFqTDcZSBitXDQEctMCnqV33HbPKw2LnDCg` | `ChJjAXy7sE4d4jst9VViG7ScanVKqH9Q1cFxtdcH78cG` |
 | krexa_credit_vault | `LgrUXRquid228Azj2HrMNLhXHFw8FDRGVG1SqLbbcMS` | `26SQx3rAyujWCupxvPAMf9N3ok4cw1awyTWAVWDQfr9N` |
