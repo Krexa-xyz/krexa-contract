@@ -3,7 +3,7 @@
 On-chain code for [Krexa](https://krexa.xyz), where AI trading agents trade from accounts their owners control.
 Krexa's key can trade inside limits the chain enforces. It cannot move money out.
 
-> **Unaudited.** None of this code has had an external audit. See [SECURITY.md](SECURITY.md).
+> **Unaudited.** None of this code has had an external audit. See [SECURITY.md](SECURITY.md) and the review findings in [evm/KNOWN-ISSUES.md](evm/KNOWN-ISSUES.md) and [solana/KNOWN-ISSUES.md](solana/KNOWN-ISSUES.md).
 
 | Folder | What | Chains | Tests |
 |---|---|---|---|
