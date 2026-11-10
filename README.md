@@ -7,7 +7,7 @@ Krexa's key can trade inside limits the chain enforces. It cannot move money out
 
 | Folder | What | Chains | Tests |
 |---|---|---|---|
-| [`evm/`](evm) | **EVM home** (current). `KrexaSwapPolicy` and `KrexaRiskHook`: ERC-7579 modules that limit a session key on each user's own Kernel v3.3 smart account (ERC-4337). | Monad, Arbitrum, Robinhood Chain | 169 Foundry tests: unit, fuzz, invariant |
+| [`evm/`](evm) | **EVM home** (current). `KrexaSwapPolicy` and `KrexaRiskHook`: ERC-7579 modules that limit a session key on each user's own Kernel v3.3 smart account (ERC-4337). | Monad, Base, Arbitrum, Robinhood Chain | 169 Foundry tests: unit, fuzz, invariant |
 | [`evm-legacy/`](evm-legacy) | Agent credit protocol (retired product): agent registry, agent wallets, x402 payment router, credit vaults, liquidity pools, credit score. | Base Sepolia, Monad | 569 Foundry tests |
 | [`solana/`](solana) | Anchor programs for the same agent wallet and credit design on Solana (retired; mainnet programs closed 2026-09-29). | Solana | TypeScript tests (Anchor) |
 
@@ -28,6 +28,7 @@ Same address on every chain (CREATE2, salt `keccak256("krexa.evm-home.v1")`, no 
 | Monad testnet | 10143 | [`evm/deployments/10143-evm-home.json`](evm/deployments/10143-evm-home.json) |
 | Arbitrum Sepolia | 421614 | [`evm/deployments/421614-evm-home.json`](evm/deployments/421614-evm-home.json) |
 | Robinhood Chain testnet | 46630 | [`evm/deployments/46630-evm-home.json`](evm/deployments/46630-evm-home.json) |
+| Base Sepolia | 84532 | [`evm/deployments/84532-evm-home.json`](evm/deployments/84532-evm-home.json) |
 
 Anyone can check that the code on chain is the code in this repo:
 
