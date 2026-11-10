@@ -1,0 +1,46 @@
+[workspace]
+# Mainnet deploy set (as of 2026-04-09): only 4 of these 7 programs ship
+# on-chain on mainnet-beta. The other 3 are dead code for the v1 credit
+# flow (no backend builders, no CPI from the live programs) and are kept
+# in the workspace so they still compile for tests / future work.
+#
+#   DEPLOY:
+#     - krexa-agent-registry    (profiles, KYA, credit_score field)
+#     - krexa-credit-vault      (LP, collateral, extend/receive credit)
+#     - krexa-agent-wallet      (create_wallet, request_credit, repay, HF)
+#     - krexa-payment-router    (settlements, execute_payment)
+#
+#   SKIP on mainnet (kept here for now):
+#     - krexa-venue-whitelist   (only used by dead execute_trade / pay_x402)
+#     - krexa-service-plan      (milestone escrow, no builders)
+#     - krexa-score             (scores live in Postgres + agent-registry)
+#
+# See docs/archive/MAINNET_CHECKLIST.md §3 for the exact deploy order.
+members = [
+    "programs/krexa-common",
+    "programs/krexa-agent-registry",
+    "programs/krexa-credit-vault",
+    "programs/krexa-agent-wallet",
+    "programs/krexa-venue-whitelist",
+    "programs/krexa-payment-router",
+    "programs/krexa-service-plan",
+    "programs/krexa-score",
+]
+resolver = "2"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+# Note: `opt-level = "s"` / `"z"` and `strip = true` were tried for size
+# reduction and rejected. Strip is a no-op (cargo-build-sbf already strips);
+# opt-level below 3 blows the SBF 4096-byte per-function stack limit in
+# krexa_agent_wallet::CreateWallet::try_accounts because the less-inlined
+# codegen uses more stack for the Bumps struct. Keep default opt-level.
+
+[profile.release.build-override]
+opt-level = 3
+
+[profile.dev.package."*"]
+opt-level = 3
+

@@ -1,0 +1,11 @@
+{
+  "KrexaRiskHook": "0xAcF4425F4E349cD4cE646898d2a5a6250945f5d9",
+  "KrexaRiskHookCodehash": "0x84b28cc9fa76e796f646e397954ce169a3174432b3d60c630509860b50aa95a9",
+  "KrexaSwapPolicy": "0x446b4ea7cd7CF874895c03b91478514Cbfd7E931",
+  "KrexaSwapPolicyCodehash": "0x1c716e0bf998f5942de1d5daeb87b576546ec8e365273691672a9ed211f7fe44",
+  "chainId": 421614,
+  "create2Factory": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+  "deployer": "0xE12019272321032c4dE7CEFaC67bD79e808aFa7C",
+  "salt": "0xa1cbd7b988cf582275a5dce89b3c8bbf936db54600d01c9a9942a2eb20f9cb62",
+  "status": "UNAUDITED - testnet only until external audit"
+}

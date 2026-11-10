@@ -1,0 +1,27 @@
+# Krexa EVM home: KrexaSwapPolicy + KrexaRiskHook (Kernel v3.3 / ERC-7579 modules).
+# These settings are the ones the deployed bytecode was built with. Changing any of them, or moving a file,
+# changes the code hash, so `forge build` would no longer match the addresses in deployments/.
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+libs = ["lib"]
+solc = "0.8.24"
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+evm_version = "cancun"
+fs_permissions = [{ access = "read-write", path = "./deployments" }]
+remappings = [
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "forge-std/=lib/forge-std/src/",
+]
+
+[profile.default.fuzz]
+runs = 512
+
+[profile.default.invariant]
+runs = 64
+depth = 64
+fail_on_revert = false

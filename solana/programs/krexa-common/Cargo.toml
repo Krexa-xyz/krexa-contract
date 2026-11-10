@@ -1,0 +1,17 @@
+[package]
+name    = "krexa-common"
+version = "0.1.0"
+edition = "2021"
+description = "Shared constants, errors, and enums for Krexa Solana programs"
+
+# Regular library — not an Anchor program, no cdylib.
+[lib]
+name = "krexa_common"
+
+[features]
+cpi     = []
+default = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = { version = "0.30.1" }

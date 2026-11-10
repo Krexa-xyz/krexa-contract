@@ -1,0 +1,22 @@
+[package]
+name        = "krexa-credit-vault"
+version     = "0.1.0"
+edition     = "2021"
+description = "Program 2: Liquidity pool — LP deposits earn yield, credit program borrows"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "krexa_credit_vault"
+
+[features]
+no-entrypoint  = []
+no-idl         = []
+no-log-ix-name = []
+cpi            = ["no-entrypoint"]
+default        = []
+idl-build      = ["anchor-lang/idl-build", "anchor-spl/idl-build", "krexa-common/idl-build"]
+
+[dependencies]
+anchor-lang  = { version = "0.30.1", features = ["init-if-needed"] }
+anchor-spl   = { version = "0.30.1", features = ["token", "associated_token"] }
+krexa-common = { path = "../krexa-common" }

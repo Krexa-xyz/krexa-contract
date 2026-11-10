@@ -1,0 +1,29 @@
+{
+  "network": "monad-mainnet",
+  "chainId": 143,
+  "deployedAt": "2026-06-02",
+  "deployer": "0xA1090527ac5c019Abc3989F405a5a63bB008008D",
+  "contracts": {
+    "AgentRegistry": "0x460b023a87f7Dbe0114357Ab45830F1A41e9C103",
+    "PaymentRouter": "0x398506f0E0e18647d3A0e574c94752DdC44f5060",
+    "VaultFactory": "0xd0CB44B07e922d3bc276061bCB9eF41e103Cc872",
+    "SeniorPool": "0xadfCaCbaC1B21fb0Ed86872E859E1b46a720A6e1",
+    "GeneralPool": "0x964d800A7Bf5353084fE6360D22390ABec46f11F",
+    "MilestoneRegistry": "0x746D4E417C111eD557A8564b7bEB6C4c3EB9C7F3",
+    "KrexitScore": "0xdDb014C771236CD62e1F3eD6cC9459163960bBDA",
+    "VenueWhitelist": "0x56d60DA8665f56626bC6E2f372214A942f85a258",
+    "AgentWalletFactory": "0x79c061083Ee39F0ECE67D30f5172C86372CAdb18",
+    "ServicePlan": "0x0b45fDB4Fd92e8d8F21EFB03436Ea22E0eBDD824"
+  },
+  "externalTokens": {
+    "USDC": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603"
+  },
+  "roles": {
+    "admin": "0xA1090527ac5c019Abc3989F405a5a63bB008008D",
+    "oracle": "0xA1090527ac5c019Abc3989F405a5a63bB008008D",
+    "feeRecipient": "0xA1090527ac5c019Abc3989F405a5a63bB008008D"
+  },
+  "verification": "pending — MONADSCAN_API_KEY not set",
+  "rpc": "https://rpc.monad.xyz",
+  "explorer": "https://monadscan.com"
+}

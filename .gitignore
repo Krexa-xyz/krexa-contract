@@ -1,0 +1,14 @@
+# Foundry
+out/
+cache/
+broadcast/
+deployments/31337-*.json
+.env
+# Solana / Anchor
+solana/target/
+solana/node_modules/
+solana/.anchor/
+solana/test-ledger/
+**/*-keypair.json
+# OS
+.DS_Store

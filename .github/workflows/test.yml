@@ -1,0 +1,22 @@
+name: test
+on: [push, pull_request]
+jobs:
+  evm:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [evm, evm-legacy]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+      - run: forge test
+        working-directory: ${{ matrix.project }}
+  solana:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo build
+        working-directory: solana

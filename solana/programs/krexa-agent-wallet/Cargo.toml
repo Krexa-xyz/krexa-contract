@@ -1,0 +1,25 @@
+[package]
+name        = "krexa-agent-wallet"
+version     = "0.1.0"
+edition     = "2021"
+description = "Program 3 (CORE): PDA agent wallets, credit lines, health monitoring, liquidation"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "krexa_agent_wallet"
+
+[features]
+no-entrypoint  = []
+no-idl         = []
+no-log-ix-name = []
+cpi            = ["no-entrypoint"]
+default        = []
+idl-build      = ["anchor-lang/idl-build", "anchor-spl/idl-build", "krexa-common/idl-build", "krexa-agent-registry/idl-build", "krexa-credit-vault/idl-build", "krexa-venue-whitelist/idl-build"]
+
+[dependencies]
+anchor-lang           = { version = "0.30.1", features = ["init-if-needed"] }
+anchor-spl            = { version = "0.30.1", features = ["token", "associated_token"] }
+krexa-common          = { path = "../krexa-common" }
+krexa-agent-registry  = { path = "../krexa-agent-registry",  features = ["cpi"] }
+krexa-credit-vault    = { path = "../krexa-credit-vault",    features = ["cpi"] }
+krexa-venue-whitelist = { path = "../krexa-venue-whitelist", features = ["cpi"] }
